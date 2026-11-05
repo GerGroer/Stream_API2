@@ -22,7 +22,7 @@ public class Main {
         }
 
         // № 1
-        System.out.println("=== № 1. Посетители ===");
+        System.out.println("=== № 1.                                    Посетители ===");
         visitors.stream().forEach(System.out::println);
         System.out.println("Количество: " + visitors.stream().count());
 
@@ -31,12 +31,12 @@ public class Main {
                 .flatMap(v -> v.getFavoriteBooks().stream())
                 .distinct()
                 .toList();
-        System.out.println("\n=== № 2. Книги без повторений ===");
+        System.out.println("\n=== № 2.                         Книги без повторений ===");
         uniqueBooks.forEach(System.out::println);
         System.out.println("Количество: " + uniqueBooks.size());
 
         // № 3
-        System.out.println("\n=== № 3. Книги по году издания ===");
+        System.out.println("\n=== № 3.                     Книги по году издания ===");
         uniqueBooks.stream()
                 .sorted(Comparator.comparingInt(Book::getPublishingYear))
                 .forEach(System.out::println);
